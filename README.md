@@ -76,11 +76,11 @@ is missing. During installation, a default configuration is copied to /etc/pp-en
                     and you don't want to use the balance_power profile when on battery
 * modify_dpm=false  -> If true, dpm will match the selected power-profiles (pp). Allows changing of 
                      power_dpm_force_performance_level. More info: https://dri.freedesktop.org/docs/drm/gpu/amdgpu/thermal.html
-allow_low_dpm_bat=false -> If true, a 'low' DPM value is allowed when in power-save mode and on battery. Not suggested for iGPU less powerful than 780M
-allow_low_dpm_ac=false -> If true, a 'low' DPM value is allowed when in power-save mode and on ac. Not suggested for iGPU less powerful than 780M
-allow_high_dpm_bat=false -> If true, a 'high' DPM value is allowed when in performance mode and on battery. Unsure about how useful this is
-allow_high_dpm_ac=false -> If true, a 'high' DPM value is allowed when in performance mode and on ac. Unsure about how useful this is
-modify_powersave_tdp_limit=true -> If true, tdp limits are changed based on the configured tdp-limits below for the power-save profile
+* allow_low_dpm_bat=false -> If true, a 'low' DPM value is allowed when in power-save mode and on battery. Not suggested for iGPU less powerful than 780M
+* allow_low_dpm_ac=false -> If true, a 'low' DPM value is allowed when in power-save mode and on ac. Not suggested for iGPU less powerful than 780M
+* allow_high_dpm_bat=false -> If true, a 'high' DPM value is allowed when in performance mode and on battery. Unsure about how useful this is
+* allow_high_dpm_ac=false -> If true, a 'high' DPM value is allowed when in performance mode and on ac. Unsure about how useful this is
+* modify_powersave_tdp_limit=true -> If true, tdp limits are changed based on the configured tdp-limits below for the power-save profile
                     If you want to use this option, you must install ryzenadj and make sure you can run ryzenadj --info correctly
 * modify_balanced_tdp_limit=false -> If true, tdp limits are changed based on the configured tdp-limits below for the balanced profile
                     If you want to use this option, you must install ryzenadj and make sure you can run ryzenadj --info correctly
@@ -98,24 +98,24 @@ Fast Limit >= Slow Limit >= STAPM Limit
 It's suggested not to put a limit too low.  For reference, with a 7940HS you can comfortably use 8W in power-mode on a 
 1600p screen. For a 4K screen, I need 10W.  
 [tdp-limits] 
-powersave_slow_limit_bat=15 ->  STAPM limit for power-save mode on battery
-powersave_fast_limit_bat=20 -> Slow limit for power-save mode on battery
-powersave_sustained_limit_bat=15 -> Fast limit for power-save mode on battery
-powersave_slow_limit_ac=20 ->  STAPM limit for power-save mode on ac
-powersave_fast_limit_ac=25 -> Slow limit for power-save mode on ac
-powersave_sustained_limit_ac=20 -> Fast limit for power-save mode on ac
-balanced_slow_limit_bat=35 -> STAPM limit for balanced mode on battery
-balanced_fast_limit_bat=40 -> Slow limit for balanced mode on battery
-balanced_sustained_limit_bat=35 -> Fast limit for balanced mode on battery
-balanced_slow_limit_ac=45 -> STAPM limit for balanced mode on ac
-balanced_fast_limit_ac=50 -> Slow limit for balanced mode on ac
-balanced_sustained_limit_ac=45 -> Fast limit for balanced mode on ac
-performance_slow_limit_bat=62 ->  STAPM limit for performance mode on battery
-performance_fast_limit_bat=65 -> Slow limit for performance mode on battery
-performance_sustained_limit_bat=62 -> Fast limit for performance mode on battery
-performance_slow_limit_ac=70 -> STAPM limit for performance mode on
-performance_fast_limit_ac=80 -> Slow limit for performance mode on
-performance_sustained_limit_ac=70 -> -> Fast limit for performance mode on
+* powersave_slow_limit_bat=15 ->  STAPM limit for power-save mode on battery
+* powersave_fast_limit_bat=20 -> Slow limit for power-save mode on battery
+* powersave_sustained_limit_bat=15 -> Fast limit for power-save mode on battery
+* powersave_slow_limit_ac=20 ->  STAPM limit for power-save mode on ac
+* powersave_fast_limit_ac=25 -> Slow limit for power-save mode on ac
+* powersave_sustained_limit_ac=20 -> Fast limit for power-save mode on ac
+* balanced_slow_limit_bat=35 -> STAPM limit for balanced mode on battery
+* balanced_fast_limit_bat=40 -> Slow limit for balanced mode on battery
+* balanced_sustained_limit_bat=35 -> Fast limit for balanced mode on battery
+* balanced_slow_limit_ac=45 -> STAPM limit for balanced mode on ac
+* balanced_fast_limit_ac=50 -> Slow limit for balanced mode on ac
+* balanced_sustained_limit_ac=45 -> Fast limit for balanced mode on ac
+* performance_slow_limit_bat=62 ->  STAPM limit for performance mode on battery
+* performance_fast_limit_bat=65 -> Slow limit for performance mode on battery
+* performance_sustained_limit_bat=62 -> Fast limit for performance mode on battery
+* performance_slow_limit_ac=70 -> STAPM limit for performance mode on
+* performance_fast_limit_ac=80 -> Slow limit for performance mode on
+* performance_sustained_limit_ac=70 -> -> Fast limit for performance mode on
 
 Unit: seconds.  
 [intervals]
