@@ -5,8 +5,8 @@ scope, thus power-profiles-enhancer was born.
 
 From kernel 6.5+ there's AMD-PSTATE in active mode as default CPU driver on ZEN2+ machines
 
-Power Profiles Daemon cannot talk to AMD-PSTATE driver directly leaving it unmanaged and inconsistent with whole system
-energy profile. Moreover, power profiles does not change power limits, governors and DPM for the iGPU.
+~~Power Profiles Daemon cannot talk to AMD-PSTATE driver directly leaving it unmanaged and inconsistent with whole system
+energy profile~~ Power Profiles Daemon can now talk to AMD PSTATE drive directly, so this function is now only needed for older versions of Power Profiles Daemon. Moreover, power profiles does not change power limits, governors and DPM for the iGPU.
 
 This project is aiming to close this gap with monitoring Power Profiles current mode in the background and setting:
 
